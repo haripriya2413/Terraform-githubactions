@@ -33,7 +33,7 @@ resource "aws_instance" "strapi-ec2" {
   instance_type               = "t2.medium"
   vpc_security_group_ids      = [aws_security_group.strapi-sg.id]
   subnet_id = aws_subnet.public_subnet1.id
-  key_name                    = "PEM-NV"
+  key_name                    = "devops"
   associate_public_ip_address = true
   user_data                   = <<-EOF
                                 #!/bin/bash
